@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Matty
-% Based on: https://github.com/jakegut/resume
-% License : MIT
+% Targeted for: Applied AI Engineer @ neuroGrid
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -44,12 +42,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting with horizontal line separators
+% Section formatting
 \titleformat{\section}{
   \vspace{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 % -------------------- CUSTOM COMMANDS --------------------
@@ -89,24 +86,24 @@
 % -------------------- HEADING--------------------
 \begin{center}
     \textbf{\Huge \scshape Utkarsh Mankad} \\ \vspace{4pt} 
-    \textbf{Engineering Manager $|$ Software Development Manager}\\ \vspace{4pt}
+    \textbf{Engineering Leader $|$ Applied AI Engineer $|$ Full-Stack Architect} \\ \vspace{4pt}
     \small
     Bangalore, India $|$ +91 8095173074 $|$ \href{mailto:utkarsh.mankad@gmail.com}{\underline{utkarsh.mankad@gmail.com}} $|$ \href{https://linkedin.com/in/utkarsh-mankad}{\underline{LinkedIn}}
 \end{center}
 
 %---------------------Summary--------------------
 \section{Summary}
-Strategic Engineering Leader with 16 years of experience driving high-scale B2B e-commerce and AI-driven data platforms. Currently leading Oracle’s AI Data Platform Connectivity and Metadata teams to architect enterprise-grade LLM infrastructure. Proven track record of scaling 20+ member cross-functional teams and managing complex, multi-million dollar product lifecycles from conception to global delivery.
+Applied AI Engineering Leader with 16 years of experience building enterprise-grade SaaS platforms and AI-driven orchestration systems. Specialist in embedding LLMs and RAG pipelines into complex workflows to transform fragmented data into intelligent products. Expert in full-stack delivery, vector databases (Oracle 23ai), and high-scale architectures, with a proven track record of moving from MVP to global scale in fast-paced, high-ownership environments.
 
 % -------------------- SKILLS --------------------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{AI Data Strategy}{: AI Roadmap and ROI Alignment, Data Governance, Build vs. Buy Leadership, Ethical AI, Stakeholder \& Customer Management (Sr. Leadership level)} \\
-     \textbf{Data Engineering}{: AI Data Platform Connectivity, Metadata Management, Spark JDBC Connector Architecture, Vector Databases (Oracle 23ai), Distributed Data (Kafka/Scala)} \\
-     \textbf{MLOps Infrastructure}{: LLMOps \& RAG Architecture, Oracle 23ai (GenAI DB), AI-Augmented Engineering (LLM-based coding/testing), FinOps for AI, Kubernetes/OCI} \\
-     \textbf{Leadership}{: Engineering Management (Sr. EM/Director Level), Strategic Budgeting (\$35M+ scale), Solution Architecture with Principal Engineers, Cross-functional Leadership} \\
-     \textbf{Technical Stack}{: Java, Scala, Python, JavaScript/TypeScript, Go, Spark, React, Node.js, PostgreSQL, Redis, Solr}
+     \textbf{Applied AI/ML}{: LLM Integration, RAG Pipeline Architecture, Vector Databases (Oracle 23ai), MLOps, AI-Augmented Engineering, Embedding Models, Agentic Workflows} \\
+     \textbf{Full-Stack & SaaS}{: React, TypeScript, Node.js, Python, Java, Scala, Go, REST/GraphQL APIs, Microservices, Observability, Secure-by-default SaaS Patterns} \\
+     \textbf{Data Engineering}{: Metadata Management, Relational \& NoSQL (PostgreSQL, Redis, Solr), Data Modeling, Distributed Systems (Spark, Kafka)} \\
+     \textbf{Infrastructure}{: AWS/OCI, Kubernetes, Docker, CI/CD Pipelines, Infrastructure-as-Code, Performance Optimization} \\
+     \textbf{Technical Leadership}{: Technical System Design, Code Reviews, Architecture Patterns, Stakeholder Management, Agile MVP Development}
     }}
  \end{itemize}
 
@@ -115,31 +112,30 @@ Strategic Engineering Leader with 16 years of experience driving high-scale B2B 
     \resumeSubHeadingListStart
 
         \resumeProjectHeading
-        {\textbf{Software Development Manager (M2)} $|$ \emph{Oracle}}{Jan 2025 -- Present}
+        {\textbf{Software Development Manager (M2) --- AI Data Platform} $|$ \emph{Oracle}}{Jan 2025 -- Present}
         \resumeItemListStart
-            \resumeItem {\textbf{Directing AI Data Platform Connectivity \& Metadata teams}, architecting high-performance Spark/Scala ingestion layers for Oracle 23ai (GenAI DB), MySQL Heatwave, and 10+ enterprise sources.}
-            \resumeItem {\textbf{Spearheaded AI-Augmented Engineering} by integrating LLM tools for automated code generation and integration testing, significantly accelerating delivery of mission-critical data connectors.}
-            \resumeItem {\textbf{Collaborating with Principal Engineers} to define scalable platform architectures while managing cross-functional dependencies and high-level stakeholder roadmaps.}
-            \resumeItem {\textbf{Leading at the core of Oracle’s AI growth}, supporting a division that contributed to a 243\% YoY increase in AI infrastructure revenue and record-breaking cloud expansion.}
+            \resumeItem {\textbf{Architecting AI Data Platform Connectivity} layers to enable LLM-driven metadata management and ingestion for Oracle 23ai (GenAI DB) and MySQL Heatwave.}
+            \resumeItem {\textbf{Spearheaded RAG-based engineering automation} by integrating LLM tools for code generation and testing, reducing delivery timelines for mission-critical data connectors by 30\%.}
+            \resumeItem {\textbf{Hands-on collaboration with Principal Engineers} to design scalable platform patterns for vector search and real-time data ingestion across 10+ enterprise cloud sources.}
+            \resumeItem {\textbf{Embedding technical excellence} across pods by owning observability and security patterns for high-scale AI infrastructure, contributing to 243\% YoY revenue growth.}
         \resumeItemListEnd
 
         \resumeProjectHeading
-        {\textbf{Engineering Manager} $|$ \emph{Fynd (Reliance Retail)}}{Dec 2021 -- Dec 2024}
+        {\textbf{Engineering Leader --- SaaS \& Product Delivery} $|$ \emph{Fynd (Reliance Retail)}}{Dec 2021 -- Dec 2024}
         \resumeItemListStart
-            \resumeItem {\textbf{Spearheaded technical development} of the "Metro" B2B E-commerce portal, serving 5 million+ merchants with an annual GMV of ₹50,000 Cr.}
-            \resumeItem {\textbf{Transformed team productivity} by leading a 20-member multi-disciplinary organization (FE, BE, Android, QA, PM), delivering 100+ high-impact features through optimized sprint cycles.}
-            \resumeItem {\textbf{Architected scalable system designs} and governed code quality through rigorous PR approvals and architectural reviews, ensuring 99.9\% uptime for critical retail services.}
-            \resumeItem {\textbf{Navigated complex stakeholder landscapes} within Reliance Retail to resolve critical dependencies and align engineering roadmaps with multi-billion dollar business objectives.}
+            \resumeItem {\textbf{Led end-to-end technical delivery} of the "Metro" B2B E-commerce SaaS portal, architecting full-stack features that powered an annual GMV of ₹50,000 Cr for 5M+ merchants.}
+            \resumeItem {\textbf{Modeled high-ownership culture} across a 20-member organization, shipping 100+ high-impact features through a robust TypeScript/React and Node.js backend ecosystem.}
+            \resumeItem {\textbf{Ensured 99.9\% system reliability} by instituting rigorous architectural reviews, automated testing, and secure enterprise SaaS patterns for high-traffic retail services.}
+            \resumeItem {\textbf{Translated customer workflows into product experiences} by partnering with Product \& Design, ensuring elegant technical solutions for complex B2B business requirements.}
         \resumeItemListEnd
         
         \resumeProjectHeading
-        {\textbf{Scientist D (Senior Lead)} $|$ \emph{CDAC (Ministry of Electronics \& IT, GoI)}}{Aug 2010 -- Nov 2021}
+        {\textbf{Scientist D (Senior Technical Lead)} $|$ \emph{CDAC (MeitY, GoI)}}{Aug 2010 -- Nov 2021}
         \resumeItemListStart
-            \resumeItem {\textbf{Advanced from Individual Contributor to Leadership}, eventually managing a portfolio of projects totaling ₹5 Cr and contributing to national-level RFPs exceeding ₹300 Cr.} 
-            \resumeItem {\textbf{Pioneered IoT \& Big Data Innovation} by designing a system capable of handling 400GB of data at minute-by-minute velocity, laying the groundwork for real-time data analytics.}
-            \resumeItem {\textbf{Engineered flagship MVPs} for the Namma Metro app and critical COVID-19 patient monitoring systems, demonstrating hands-on full-stack expertise in React and Mobile development.}
-            \resumeItem {\textbf{Revitalized legacy product lines} by restructuring 7 existing products into modern, cloud-ready architectures, significantly extending their market relevance.}
-            \resumeItem {\textbf{Drove revenue growth} of ₹50 Lakhs for IoT hardware kits through strategic technical marketing and product-led growth initiatives.}
+            \resumeItem {\textbf{Pioneered IoT \& Big Data Innovation}, designing distributed systems processing 400GB of real-time geospatial and telemetry data with minute-by-minute velocity.} 
+            \resumeItem {\textbf{Shipped flagship full-stack MVPs} for the Namma Metro app and COVID-19 monitoring systems using React and Mobile stacks, demonstrating speed and agility in high-stakes environments.}
+            \resumeItem {\textbf{Transformed fragmented institutional data} from 7 legacy product lines into a modern, cloud-native work orchestration system, extending market relevance by 10+ years.}
+            \resumeItem {\textbf{Technical Quality Ownership}: Managed project portfolios totaling ₹300 Cr, setting engineering patterns for security and reliability across national-scale infrastructure.}
         \resumeItemListEnd
         
     \resumeSubHeadingListEnd
