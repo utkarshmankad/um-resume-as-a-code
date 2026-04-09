@@ -34,7 +34,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
-          files: um_resume_em_reach.pdf
+          files: umEmReach.pdf
           body: "Automated build of resume for tag ${{ github.ref_name }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
