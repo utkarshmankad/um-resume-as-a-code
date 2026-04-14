@@ -1,0 +1,161 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tfrupee}
+\DeclareUnicodeCharacter{20B9}{\rupee}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting with horizontal line separators
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{center}
+    \textbf{\Huge \scshape Utkarsh Mankad} \\ \vspace{4pt} 
+    \textbf{Senior Technical Java Manager $|$ Backend Architecture Leader}\\ \vspace{4pt}
+    \small
+    Bangalore, India $|$ +91 8095173074 $|$ \href{mailto:utkarsh.mankad@gmail.com}{\underline{utkarsh.mankad@gmail.com}} $|$ \href{https://linkedin.com/in/utkarsh-mankad}{\underline{LinkedIn}}
+\end{center}
+
+%---------------------Summary--------------------
+\section{Summary}
+Techno-managerial Engineering Leader with 16 years of end-to-end software development experience, including 10+ years of deep expertise in Java (Java 8+) and backend product development. Operating at a 60\% technical / 40\% management capacity, excelling at driving High-Level Design (HLD), Low-Level Design (LLD), and enterprise architecture. Proven track record of managing high-performing developer pods (7-10+ engineers) across global time zones, championing Agile SDLC, Clean Code, SOLID principles, and continuous integration to deliver highly scalable, data-intensive systems for Fortune 500 clients.
+
+% -------------------- SKILLS --------------------
+\section{Key Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Backend \& Data}{: Java (Java 8+) $|$ High-Volume Data Processing $|$ PostgreSQL $|$ MariaDB $|$ Distributed Systems} \\ \vspace{3pt}
+     \textbf{Architecture \& Design}{: HLD \& LLD $|$ SOLID Principles $|$ Clean Code $|$ Code \& Design Reviews $|$ Microservices} \\ \vspace{3pt}
+     \textbf{Cloud \& Infrastructure}{: Kubernetes $|$ Docker $|$ CI/CD Pipelines $|$ Cloud-Native Architecture $|$ AWS/OCI} \\ \vspace{3pt}
+     \textbf{Leadership \& Process}{: Techno-Managerial Leadership $|$ Agile SDLC $|$ Multi-Site Global Teams $|$ Stakeholder Mentorship}
+    }}
+ \end{itemize}
+
+% -------------------- EXPERIENCE --------------------
+\section{Professional Experience}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{Software Development Manager (M2)} $|$ \emph{Oracle}}{Jan 2025 -- Present}
+        \item[] \small{\textit{Techno-managerial leader directing AI Data Platform Connectivity, driving backend Java/Scala architecture and deployments.}} \vspace{-5pt}
+        \resumeItemListStart
+            \resumeItem {\textbf{Drive High-Level and Low-Level Design (HLD/LLD)} for high-performance Java and Scala-based data ingestion layers, acting as a hands-on technical mentor for multiple engineering pods.}
+            \resumeItem {\textbf{Enforce engineering excellence} by actively participating in complex design reviews, code reviews, and enforcing SOLID principles and Clean Code practices across global, multi-timezone teams.}
+            \resumeItem {\textbf{Manage cloud-native infrastructure}, overseeing continuous integration and continuous deployment (CI/CD) pipelines utilizing Docker and Kubernetes for container orchestration.}
+            \resumeItem {\textbf{Collaborate cross-functionally} in a matrix organization, interfacing with application engineering teams and end-users to translate complex requirements into resilient backend functional specifications.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Engineering Manager} $|$ \emph{Fynd (Reliance Retail)}}{Dec 2021 -- Dec 2024}
+        \item[] \small{\textit{Managed end-to-end technical delivery and SDLC for a B2B E-commerce SaaS portal serving 5M+ merchants.}} \vspace{-5pt}
+        \resumeItemListStart
+            \resumeItem {\textbf{Mentored and managed} developer pods of 7-10 engineers within a larger 20-member multi-disciplinary team, taking ownership of rapid bug-fixing, feature delivery, and system maintenance.}
+            \resumeItem {\textbf{Architected scalable backend solutions} capable of processing massive volumes of transactional data using PostgreSQL and distributed caches, ensuring 99.9\% uptime for critical services.}
+            \resumeItem {\textbf{Championed Agile development methodologies} across the full Software Development Life Cycle (SDLC), optimizing sprint planning and delivery predictability for complex retail systems.}
+            \resumeItem {\textbf{Navigated complex stakeholder landscapes} to resolve multi-system dependencies, driving make-vs-buy architectural decisions that supported an annual GMV of ₹50,000 Cr.}
+        \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+% -------------------- EARLIER CAREER --------------------
+\section{Earlier Career}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Scientist D (Senior Technical Lead)} $|$ \emph{CDAC (MeitY, GoI)}}{Aug 2010 -- Nov 2021}
+        \item[] \small{\textit{Progressed from hands-on Java Developer to Technical Lead, engineering national-level software systems.}} \vspace{-5pt}
+        \resumeItemListStart
+            \resumeItem {\textbf{Spearheaded backend Java development} for critical public service applications, defining implementation and verification plans for highly secure government technology projects.} 
+            \resumeItem {\textbf{Engineered large-volume data processing systems}, including distributed IoT frameworks capable of handling 400GB of real-time geospatial data using robust relational databases.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BITS Pilani}{Pilani, India}
+      {M.Tech Software Systems}{}
+    \resumeSubheading
+      {Rajasthan University}{Jaipur, India}
+      {BE (Hons) in Engineering}{}
+  \resumeSubHeadingListEnd
+
+\end{document}
