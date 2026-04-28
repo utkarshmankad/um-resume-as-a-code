@@ -1,0 +1,153 @@
+%-------------------------
+% Resume in Latex
+% Targeted for: Senior Product Manager (Data Observability) @ Acceldata
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tfrupee}
+\DeclareUnicodeCharacter{20B9}{\rupee}
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting with horizontal line separators
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlength{\footskip}{4.08003pt}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{center}
+    \textbf{\Huge \scshape Utkarsh Mankad} \\ \vspace{4pt} 
+    \textbf{Senior Product Manager $|$ Technical Product Leader}\\ \vspace{4pt}
+    \small
+    Bangalore, India $|$ +91 8095173074 $|$ \href{mailto:utkarsh.mankad@gmail.com}{\underline{utkarsh.mankad@gmail.com}} $|$ LinkedIn: \href{https://www.linkedin.com/in/utkarsh-mankad}{\underline{linkedin.com/in/utkarsh-mankad}}
+\end{center}
+
+%---------------------About Me--------------------
+\section{About Me}
+Results-driven Senior Product Manager and Technical Product Leader with 16 years of experience in product development setups, including 5+ years driving Enterprise Data Products. Expert in full-cycle product management (ideation to launch) for data processing platforms, databases, and machine learning infrastructure. Proven ability to build coherent product narratives, lead cross-functional collaboration with 15+ engineers, and make rigorous strategic trade-offs. Deeply technical background allows for seamless communication of complex data observability and architecture topics to diverse stakeholders, ensuring successful adoption and business growth.
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Product Management}{: Full Cycle PM (Ideation to Launch) $|$ Product Strategy \& Vision $|$ 12+ Month Roadmaps $|$ Go-to-Market} \\ \vspace{3pt}
+     \textbf{Data \& AI Domain}{: Data Observability $|$ Machine Learning Platforms $|$ Databases $|$ Data Processing Pipelines $|$ AI Integration} \\ \vspace{3pt}
+     \textbf{Leadership \& Execution}{: Cross-Functional Collaboration $|$ Mentorship $|$ Agile Delivery $|$ Rigorous Trade-off Decisions} \\ \vspace{3pt}
+     \textbf{Business Acumen}{: Formative Research $|$ Market Gap Analysis $|$ Stakeholder Communication $|$ Product Adoption Metrics}
+    }}
+ \end{itemize}
+
+% -------------------- EXPERIENCE --------------------
+\section{Professional Experience}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{Senior Technical Product Manager (M2)} $|$ \emph{Oracle}}{Jan 2025 -- Present}
+        \resumeItemListStart
+            \resumeItem {\textbf{Drive product strategy and the broader 12+ month roadmap} for the AI Data Platform Connectivity sub-group, establishing near-term goals and a long-term vision for enterprise data integration.}
+            \resumeItem {\textbf{Lead cross-functional collaboration efforts} with a team of 15+ engineers and stakeholders to plan, design, and execute the delivery of high-quality data pipelines and observability features.}
+            \resumeItem {\textbf{Mentor Product Managers and technical leads} by providing deep insights from formative market research, identifying market gaps, and leveraging cutting-edge technical insights in GenAI and databases.}
+            \resumeItem {\textbf{Build a coherent product narrative} that ties together complex machine learning infrastructure features, clearly articulating technical complexities to diverse enterprise customers to drive product adoption.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Product Leader / Engineering Manager} $|$ \emph{Fynd (Reliance Retail)}}{Dec 2021 -- Dec 2024}
+        \resumeItemListStart
+            \resumeItem {\textbf{Owned full-cycle product management (ideation to launch)} for the "Metro" B2B E-commerce SaaS product, successfully delivering features that scaled adoption to 5 million+ merchants and generated ₹50,000 Cr annual GMV.}
+            \resumeItem {\textbf{Served as the go-to person for all strategic and tactical concerns}, driving rigorous product decisions and making hard trade-offs between feature development, system reliability, and cost control.}
+            \resumeItem {\textbf{Led a 20-member cross-functional team} (Engineering, Design, Operations) to execute the product roadmap, fostering a highly autonomous and healthy work environment.}
+            \resumeItem {\textbf{Exercised strong business acumen} to align the product vision with executive expectations, regularly presenting product success metrics and strategies to C-level stakeholders.}
+        \resumeItemListEnd
+        
+        \resumeProjectHeading
+        {\textbf{Senior Product Lead (Scientist D)} $|$ \emph{CDAC (Ministry of Electronics \& IT, GoI)}}{Aug 2010 -- Nov 2021}
+        \resumeItemListStart
+            \resumeItem {\textbf{Led enterprise data product development}, managing a vast portfolio of national-level technology products totaling ₹300 Cr in value.} 
+            \resumeItem {\textbf{Defined the product vision and roadmap} for highly scalable Big Data analytics and IoT platforms capable of processing 400GB of data, acting as the primary bridge between technical teams and government stakeholders.}
+            \resumeItem {\textbf{Successfully launched flagship MVPs} from scratch to full adoption, demonstrating a track record of thriving in highly ambiguous, fast-moving technology environments.}
+        \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+% -------------------- EDUCATION --------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BITS Pilani}{Pilani, India}
+      {M.Tech Software Systems}{Jun 2017 $|$ GPA: 9.0/10.0}
+    \resumeSubheading
+      {Rajasthan University}{Jaipur, India}
+      {Bachelor of Engineering (Computer Science equivalent)}{Jun 2009 $|$ GPA: 7.0/10.0}
+  \resumeSubHeadingListEnd
+
+\end{document}
