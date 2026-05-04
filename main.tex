@@ -1,17 +1,15 @@
 %-------------------------
-% Resume in Latex
-% Author : Matty
-% Based on: https://github.com/jakegut/resume
-% License : MIT
+% Resume in Latex - 2 Column Layout
+% Author : Utkarsh Mankad
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper, 10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -21,141 +19,151 @@
 \usepackage{xcolor}
 \usepackage{fontawesome5}
 \usepackage{tfrupee}
+\usepackage{paracol}
+\usepackage{geometry}
 \DeclareUnicodeCharacter{20B9}{\rupee}
 
 \input{glyphtounicode}
 
+\geometry{letterpaper, top=0.4in, bottom=0.4in, left=0.5in, right=0.5in}
+
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.6in}
-\addtolength{\textheight}{1.2in}
-
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+\setlength{\columnsep}{0.4in}
 
-% Section formatting with horizontal line separators
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% Section formatting
+\titleformat{\section}{ \vspace{-8pt}\scshape\raggedright\large }{}{0em}{}[
+\color{black}
+\titlerule
+\vspace{-4pt}
+]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 % -------------------- CUSTOM COMMANDS --------------------
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{ \item\small{ {#1 \vspace{-2pt}} } }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+\vspace{-2pt}
+\item
+\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+	\textbf{#1}       & \small #2          \\
+	\textit{\small#3} & \textit{\small #4} \\
+\end{tabular*}
+\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeProjectHeading}[2]{ \item
+\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	\small#1 & \small #2 \\
+\end{tabular*}
+\vspace{-3pt} % <-- changed from -7pt to -3pt for breathing room
 }
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}
+\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\setlength{\footskip}{4.08003pt}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 % -------------------- START OF DOCUMENT --------------------
 \begin{document}
+	% -------------------- HEADING --------------------
+	\begin{center}
+		\textbf{\Huge \scshape Utkarsh Mankad} \\
+		\vspace{3pt}
+		\textbf{Senior Engineering Manager $|$ Senior Software Development Manager}\\
+		\vspace{3pt}
+		\small Bangalore, India $|$ +91 8095173074 $|$
+		\href{mailto:utkarsh.mankad@gmail.com}{\underline{utkarsh.mankad@gmail.com}}
+		$|$ \href{https://linkedin.com/in/utkarsh-mankad}{\underline{LinkedIn}}
+	\end{center}
 
-% -------------------- HEADING--------------------
-\begin{center}
-    \textbf{\Huge \scshape Utkarsh Mankad} \\ \vspace{4pt} 
-    \textbf{Engineering Leader $|$ Software Development Manager}\\ \vspace{4pt}
-    \small
-    Bangalore, India $|$ +91 8095173074 $|$ \href{mailto:utkarsh.mankad@gmail.com}{\underline{utkarsh.mankad@gmail.com}} $|$ \href{https://linkedin.com/in/utkarsh-mankad}{\underline{LinkedIn}}
-\end{center}
+	\vspace{-4pt}
 
-%---------------------Summary--------------------
-\section{Summary}
-Strategic Engineering Leader with 16 years of experience building enterprise-grade SaaS platforms and AI-driven data orchestration systems. Proven track record of managing high-velocity, cross-functional pods (20+ members) and delivering multi-million dollar product lifecycles from conception to global scale. Expert in translating complex technical constraints into scalable architectures and measurable business outcomes for Fortune 500 clients.
+	% -------------------- SUMMARY --------------------
+	\section{Summary}
+	\small{Strategic Engineering Leader with 16 years of experience building enterprise-grade SaaS platforms and AI-driven data orchestration systems. Proven track record of managing high-velocity, cross-functional pods (20+ members) and delivering multi-million dollar product lifecycles from conception to global scale. Expert in translating complex technical constraints into scalable architectures and measurable business outcomes for Fortune 500 clients.}
 
-% -------------------- SKILLS --------------------
-\section{Key Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Leadership \& Strategy}{: Engineering Management $|$ Cross-Functional Leadership $|$ Strategic ROI $|$ Build vs. Buy Analysis $|$ Stakeholder Management $|$ Quality Gates} \\ \vspace{3pt}
-     \textbf{Data \& AI Infrastructure}{: GenAI Infrastructure $|$ LLM Integration $|$ RAG Pipelines $|$ Vector Databases $|$ Spark $|$ Distributed Data (Kafka)} \\ \vspace{3pt}
-     \textbf{Architecture \& Engineering}{: SaaS Platforms $|$ Microservices $|$ Cloud Infrastructure (AWS/OCI) $|$ High Availability (99.9\% Uptime) $|$ CI/CD Pipelines} \\ \vspace{3pt}
-     \textbf{Technical Stack}{: Java $|$ Python $|$ Node.js $|$ React $|$ TypeScript $|$ Go $|$ PostgreSQL $|$ Redis}
-    }}
- \end{itemize}
+	\vspace{2pt}
 
-% -------------------- EXPERIENCE --------------------
-\section{Professional Experience}
-    \resumeSubHeadingListStart
+	% ================== TWO COLUMN BODY ==================
+	\setlength{\columnsep}{0.35in}
+	\begin{paracol}
+		{2}
 
-        \resumeProjectHeading
-        {\textbf{Software Development Manager (M2)} $|$ \emph{Oracle}}{Jan 2025 -- Present}
-        \item[] \small{\textit{Leading AI Data Platform Connectivity teams to architect enterprise-grade LLM infrastructure for Oracle 23ai.}} \vspace{-5pt}
-        \resumeItemListStart
-            \resumeItem {\textbf{Directed} multiple engineering pods to architect high-performance Spark/Scala ingestion layers for Oracle 23ai and enterprise cloud sources.}
-            \resumeItem {\textbf{Spearheaded} AI-augmented engineering initiatives, integrating LLM tools for automated code generation to reduce delivery timelines by 30\%.}
-            \resumeItem {\textbf{Collaborated} with Principal Engineers to design scalable platform patterns for vector search and real-time data ingestion.}
-            \resumeItem {\textbf{Managed} observability and security patterns for high-scale AI infrastructure, supporting a division that achieved a 243\% YoY revenue growth.}
-        \resumeItemListEnd
+		% -------------------- LEFT COLUMN --------------------
 
-        \resumeProjectHeading
-        {\textbf{Engineering Manager} $|$ \emph{Fynd (Reliance Retail)}}{Dec 2021 -- Dec 2024}
-        \item[] \small{\textit{Managed end-to-end technical delivery for the "Metro" B2B E-commerce SaaS portal serving 5M+ merchants.}} \vspace{-5pt}
-        \resumeItemListStart
-            \resumeItem {\textbf{Led} a 20-member multi-disciplinary organization across 4 pods to deliver 100+ high-impact features through optimized sprint cycles.}
-            \resumeItem {\textbf{Architected} scalable system designs and governed code quality through rigorous PR approvals, ensuring 99.9\% uptime for critical retail services.}
-            \resumeItem {\textbf{Executed} pragmatic build vs. buy analyses for third-party integrations, optimizing platform margins and reducing time-to-market.}
-            \resumeItem {\textbf{Navigated} complex stakeholder landscapes to resolve dependencies and align engineering roadmaps with business objectives, generating ₹50,000 Cr annual GMV.}
-        \resumeItemListEnd
-        
-    \resumeSubHeadingListEnd
+		% -------------------- SKILLS --------------------
+		\section{Key Skills}
+		\begin{itemize}[leftmargin=0.1in, label={}]
+			\small{\item{ \textbf{AI Tools \& Frameworks}{: LLM Fine-tuning $|$ LangChain $|$ LangGraph $|$ Prompt Engineering $|$ NLP $|$ Vector DB $|$ Knowledge Graph $|$ RAG Pipelines $|$ FinOps for AI} \\ \vspace{3pt} \textbf{Engineering Leadership}{: High Level Design $|$ Architectural Review $|$ POC Development $|$ Roadmap \& Product Management $|$ Project Budgeting $|$ Stakeholder Management $|$ Release Management $|$ Solution Architecting} \\ \vspace{3pt} \textbf{People Management}{: Hiring $|$ Appraisals $|$ Compensation Reviews $|$ Resource Management $|$ Mentoring $|$ L\&D $|$ Performance Improvement Planning} \\ \vspace{3pt} \textbf{Languages \& Frameworks}{: Java $|$ Scala $|$ Spark $|$ Python $|$ JavaScript/TypeScript $|$ React $|$ Angular $|$ Node.js $|$ Express $|$ Loopback} \\ \vspace{3pt} \textbf{Databases, Caching \& Search}{: MongoDB $|$ MySQL $|$ PostgreSQL $|$ Redis $|$ Solr $|$ ElasticSearch} \\ \vspace{3pt} \textbf{Messaging \& Queuing}{: Kafka $|$ Bull MQ} \\ \vspace{3pt} \textbf{DevOps \& Cloud}{: Docker $|$ Kubernetes $|$ Helm $|$ GitHub Actions $|$ AWS (EC2, S3, EKS, CloudWatch) $|$ GCP (Compute Engine, GKE, Cloud Storage, Cloud Logging, IAP) $|$ OCI (Compute, GenAI, DIS)} \\ \vspace{3pt} \textbf{Observability \& Monitoring}{: Grafana $|$ Coralogix $|$ NewRelic $|$ Sentry $|$ PagerDuty $|$ OpenTelemetry} \\ \vspace{3pt} \textbf{Agile \& Collaboration}{: JIRA $|$ Azure DevOps $|$ BitBucket $|$ GitHub $|$ GitLab} \\ \vspace{3pt} }}
+		\end{itemize}
 
-% -------------------- EARLIER CAREER --------------------
-\section{Earlier Career}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-        {\textbf{Scientist D (Senior Technical Lead)} $|$ \emph{CDAC (MeitY, GoI)}}{Aug 2010 -- Nov 2021}
-        \item[] \small{\textit{Advanced from IC to Leadership, managing a portfolio of national-level public service technology projects.}} \vspace{-5pt}
-        \resumeItemListStart
-            \resumeItem {\textbf{Managed} project portfolios totaling ₹300 Cr in national-level RFPs, setting engineering patterns for security and reliability across government infrastructure.} 
-            \resumeItem {\textbf{Pioneered} IoT \& Big Data distributed systems capable of processing 400GB of real-time geospatial data with minute-by-minute velocity.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+		% -------------------- EXPERIENCE --------------------
+		\section{Professional Experience}
+		\resumeSubHeadingListStart
 
-% -------------------- EDUCATION --------------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {BITS Pilani}{Pilani, India}
-      {M.Tech Software Systems}{}
-    \resumeSubheading
-      {Rajasthan University}{Jaipur, India}
-      {BE (Hons) in Engineering}{}
-  \resumeSubHeadingListEnd
+		\resumeProjectHeading {\textbf{SDM} $|$ \emph{Oracle}}{Jan 2025 -- Present}
+		\resumeItemListStart \resumeItem{\textbf{Owned complete product lifecycle of 14 data ingestion connectors}, eliminating external vendor dependencies for Snowflake and Salesforce validation, driving significant cost reduction.}
+		\resumeItem{\textbf{Integrated Oracle 23ai with VECTOR and JSON data types} and engineered critical CRUD APIs for schema management — forming the backbone of all AI features and indirectly driving 200\%+ in customer interest.}
+		\resumeItem{\textbf{Drove architectural review, development, and deployment of Oracle ALH Spark pushdown features}, achieving 300\%+ customer acquisition, and improved Oracle ALH read performance by 70\%, resulting in customer retention and 70\% growth in customer interest.}
+		\resumeItem{\textbf{Contributed to POCs for AI Agent Workflow and NLP2SQL tools}; developed an internal Prod Autocut ticket categorisation tool reducing On-Call Engineer burden by 30\%; and scaled automated test coverage to 85\%+, cutting customer-reported issues by 30\%.}
+		\resumeItem{\textbf{Drove and completed FIPS 140-3 certification} for the AI Data Platform, making the product eligible for US and UK government markets.}
+		\resumeItemListEnd \switchcolumn \resumeProjectHeading {\textbf{EM} $|$ \emph{Fynd (Reliance)}}{Dec 2021 -- Dec 2024}
+		\resumeItemListStart \resumeItem{\textbf{Led a 20-member cross-functional team} (PMs, Frontend, Backend, Android Devs, QAs) driving tech development of a B2B E-commerce portal for 3P Kirana, HoReCa, and Institutions, serving 5 million merchants with an annual GMV of ₹50,000 Cr.}
+		\resumeItem{\textbf{Collaborated with senior leadership and stakeholders} to deliver 100+ features across 10 monthly sprints, conducting code walk-throughs, reviews, and PR approvals for each feature.}
+		\resumeItem{\textbf{Coordinated cross-functional teams} to ensure flawless project execution by managing escalations, resolving dependencies, addressing communication gaps, and reporting sprint/test execution, bugs, and risks to leadership.}
+		\resumeItem{\textbf{Utilized AI-Augmented development and testing tools} across all workstreams to improve feature velocity by 20\%, quality by 40\%}
+		\resumeItemListEnd
 
+		\resumeSubHeadingListEnd
+
+		% -------------------- EARLIER CAREER (starts left, overflows right) --------------------
+		\section{Earlier Career}
+		\resumeSubHeadingListStart \resumeProjectHeading
+		{\textbf{Scientist D} $|$ \emph{CDAC}}{Aug 2010 -- Nov 2021} \resumeItemListStart
+		\resumeItem{\textbf{Led a 12-member team managing projects worth ₹5 Cr} across 5 simultaneous projects of varying scales, while contributing to RFP design and budgeting for project acquisitions exceeding ₹300 Cr.}
+		\resumeItem{\textbf{Drove ₹50L+ in product revenue} through sales and marketing of flagship IoT products (IoT Lab Kit, INDUS Kit), and generated ₹6L+ via online/offline/blended training programs during COVID-19.}
+		\resumeItem{\textbf{Architected and delivered end-to-end technology solutions}, including a Big Data-based IoT system handling 400GB of data at minute-by-minute velocity, a unified LMS, and dashboards for Smart City and Data Logger systems.}
+		\resumeItem{\textbf{Developed and modernized 10+ products and MVPs}, including the Namma Metro mobile app, COVID Patient Monitoring apps for Ladakh and Pondicherry, IoT dashboards (web \& mobile), and led restructuring of 7 existing team products.}
+		\resumeItemListEnd \resumeSubHeadingListEnd
+
+		% -------------------- SWITCH TO RIGHT COLUMN --------------------
+		%\switchcolumn
+
+		% -------------------- KEY ACHIEVEMENTS --------------------
+		%\section{Key Achievements}
+		% \resumeSubHeadingListStart
+		%  \resumeItemListStart
+		%   \resumeItem{Engineered \textbf{VECTOR \& JSON data type integration for Oracle 23ai}, becoming the foundational layer for all downstream AI features and catalysing \textbf{200\%+ surge in customer interest}.}
+		%  \resumeItem{Delivered \textbf{Oracle ALH Spark pushdown} capabilities end-to-end, unlocking \textbf{300\%+ new customer acquisition} while a parallel \textbf{70\% read performance uplift} secured existing customer retention.}
+		% \resumeItem{Steered the AI Data Platform through full \textbf{FIPS 140-3 compliance}, opening the product to \textbf{US and UK government} procurement markets.}
+		%\resumeItem{Built and scaled a \textbf{20-member cross-functional pod} that shipped \textbf{100+ features} across 10 sprints, powering a B2B portal serving \textbf{5M+ merchants} at \textbf{₹50,000 Cr annual GMV}.}
+		%\resumeItemListEnd
+		%\resumeSubHeadingListEnd
+
+		% -------------------- EDUCATION --------------------
+		\section{Education}
+		\resumeSubHeadingListStart \resumeSubheading {BITS Pilani}{Pilani, India} {M.Tech -- Software Systems}{06/2017 $|$ GPA: 9.0/10}
+		\resumeSubheading {Rajasthan University}{Jaipur, India} {BE (Hons) in Engineering}{06/2009 $|$ GPA: 7.0/10}
+		\resumeSubHeadingListEnd
+
+		% -------------------- CERTIFICATIONS --------------------
+		%\section{Certifications}
+		% \resumeSubHeadingListStart
+		%  \item[] \small{Add your certifications here.}
+		% \resumeSubHeadingListEnd
+	\end{paracol}
 \end{document}
