@@ -1,0 +1,22 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}[2026/09/15 Canonical resume layout]
+\RequirePackage[margin=0.57in]{geometry}
+\RequirePackage{fontspec}
+\setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf,Ligatures=NoCommon,RawFeature=-kern]
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{needspace}
+\RequirePackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Utkarsh Mankad - Engineering Manager},pdfauthor={Utkarsh Mankad},pdfsubject={Platform, Data and Applied AI Engineering}}
+\pagestyle{empty}
+\AtBeginDocument{\fontsize{10.5}{11.8}\selectfont}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\raggedright
+\raggedbottom
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\Needspace{6\baselineskip}\textbf{#1}\hfill #3\par\textit{#2}\par}
+\newcommand{\stack}[1]{\par{\small\textbf{Tech Stack:} #1\par}}
+\newcommand{\subrole}[2]{\Needspace{4\baselineskip}\textbf{#1}\hfill #2\par}

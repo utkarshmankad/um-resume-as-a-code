@@ -1,0 +1,9 @@
+/build/
+*.pdf
+*.aux
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+__pycache__/
+.venv/
