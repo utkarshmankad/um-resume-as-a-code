@@ -36,10 +36,46 @@ def validate():
     text = "\n".join(pages)
     (ROOT / "build/resume.txt").write_text(text)
     flat = normalize(text)
+    # Protect the corrections agreed during review, including PDF extraction.
+    check("Senior Engineering Manager | Platform, Data & Applied AI" in flat,
+          "The approved Senior Engineering Manager headline changed.")
+    snapshot = normalize(text.split("Professional Experience Snapshot", 1)[1]
+                         .split("Core Competencies", 1)[0])
+    for entry in [
+        "Oracle – Jan 2025 to Apr 2026 – Engineering Manager (Software Development Manager)",
+        "Fynd (Reliance Industries Ltd) – Dec 2021 to Dec 2024 – Engineering Manager, Platform & Integrations",
+        "CDAC (Ministry of Electronics & IT, Government of India) – Aug 2010 to Nov 2021 – SDE2 to SDE3 to Engineering Manager",
+    ]:
+        check(entry in snapshot, f"Approved snapshot entry changed: {entry}")
+    experience = text.split("Professional Experience\n", 1)[1]
+    oracle_text, later = experience.split("Fynd (Reliance Industries Ltd)", 1)
+    fynd_text, cdac_text = later.split("Earlier Experience", 1)
+    for employer, section, facts in [
+        ("Oracle", oracle_text, ["14 production", "2 sub-teams", "VECTOR and JSON", "CRUD API",
+                                "70%", "FIPS 140-3 certification", "US and UK", "85%+",
+                                "Jira Service Desk", "issues 30%", "burden 30%", "customer calls",
+                                "Jira epics and stories", "Apr 2026"]),
+        ("Fynd", fynd_text, ["Directly managed 20", "8 EMs", "without formal authority", "3M+ SKUs",
+                            "5M+ active merchants", "zero downtime", "5 to 20", "less than 5%",
+                            "bronze layer", "velocity 20%", "detection 40%", "24 months",
+                            "one-year roadmap", "Product Listing Page (PLP)", "Coralogix",
+                            "NewRelic", "Sentry", "PagerDuty", "OpenTelemetry"]),
+        ("CDAC", cdac_text, ["40 locations", "4 states", "1.2M+", "12 engineers", "PIPs",
+                            "separations", "Rs.300 Cr+", "5 concurrent", "Rs.250 Cr", "NASSCOM",
+                            "10+", "50+ institutions", "3 cities", "Rs.50L+", "8,000 sensors",
+                            "45GB/day", "2-person team to 7", "Smart Post Kiosk", "EPFO",
+                            "SDE2 & SDE3 – Individual Contributor to Technical Architect"]),
+    ]:
+        section = normalize(section)
+        for fact in ["Product Summary:", "Leadership Scope:", "Tech Stack:"] + facts:
+            check(fact in section, f"Protected {employer} content missing: {fact}")
+    check("supported Docker Compose deployment" in flat and
+          "experimental/incomplete Helm configuration" in flat,
+          "ReportAPI deployment maturity must be explicit.")
     for token in ["Utkarsh Mankad", "utkarsh.mankad@gmail.com", "+91 8095173074",
                   "Professional Experience Snapshot", "Independent AI Engineering Projects",
                   "Jan 2025", "Apr 2026", "ISHA", "ReportAPI Self-Hosted", "ClaudeWatch",
-                  "Scientist D", "2019", "2009", "AWS", "TypeScript"]:
+                  "SDE2 to SDE3 to Engineering Manager", "2019", "2009", "AWS", "TypeScript"]:
         check(token in flat, f"Missing PDF content: {token}")
     headings = ["Executive Summary", "Professional Experience Snapshot", "Core Competencies",
                 "Independent AI Engineering Projects", "Professional Experience\n",

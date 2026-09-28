@@ -8,7 +8,7 @@ One canonical resume for engineering-management roles in platform, data, and app
 
 The Executive Summary reproduces **UM-SEM-5-2 verbatim**. The **Professional Experience Snapshot is retained**. The validator protects both requirements. Its summary hash ignores line-wrap whitespace, but detects wording and punctuation changes.
 
-The employment content uses the approved conservative wording: Oracle ends April 2026; Fynd's team growth is 5 to 20 without the inconsistent per-function breakdown; CDAC's INR 300 crore figure describes proposal/opportunity scope; the M.Tech year follows the latest PDF (2019). Independent projects are ISHA, ReportAPI Self-Hosted, and ClaudeWatch. Project code supports implementation claims, not adoption or revenue claims.
+The employment sections preserve all unique material facts and section labels from the approved UM-SEM-5-2, pruning duplicate information only. Oracle ends April 2026; the M.Tech year follows the latest PDF (2019). Fynd's listed function counts total 17 within the stated 20-person team; the source does not identify the remaining three. ReportAPI supports Docker Compose deployment; its Helm configuration is experimental/incomplete. Independent projects are ISHA, ReportAPI Self-Hosted, and ClaudeWatch. Project code supports implementation claims, not adoption or revenue claims.
 
 ## Build locally
 
@@ -43,7 +43,7 @@ Inspect both pages at readable size. Check headings, line breaks, whitespace, co
 
 ## Pull requests and publication
 
-Open a PR against `main`. GitHub Actions uses the same build script, validates the PDF, and uploads a **resume-review** bundle with the PDF, extracted text, and page images. Review artifacts expire after one day; rerun a build for a fresh preview. No generated PDF is committed.
+Open a PR against `main`. GitHub Actions uses the same build script, validates the PDF, and uploads a **resume-review** bundle with the PDF, extracted text, and page images. Review artifacts are retained for 90 days; rerun a build for a fresh preview. No generated PDF is committed.
 
 After reviewing and merging the resume, run **Build Resume → Run workflow → main**, selecting **publish**. The publish job verifies that main has not moved and replaces the PDF on the single `latest` release. Ordinary pushes and PRs only build; they do not publish. The build has read-only permissions; only the manually requested publish job has write access.
 
