@@ -4,6 +4,7 @@ from pathlib import Path
 import hashlib
 import re
 import sys
+import unicodedata
 
 from pypdf import PdfReader
 
@@ -32,7 +33,10 @@ def validate():
     pdf = ROOT / "build/Utkarsh-Mankad-Resume.pdf"
     reader = PdfReader(pdf)
     check(len(reader.pages) == 2, f"Expected two pages, got {len(reader.pages)}.")
-    pages = [page.extract_text() or "" for page in reader.pages]
+    # Layout extraction respects CM-Super kerning; NFKC expands standard fi/fl ligatures.
+    pages = ["\n".join(line.strip() for line in unicodedata.normalize(
+        "NFKC", page.extract_text(extraction_mode="layout") or "").splitlines())
+        for page in reader.pages]
     text = "\n".join(pages)
     (ROOT / "build/resume.txt").write_text(text)
     flat = normalize(text)

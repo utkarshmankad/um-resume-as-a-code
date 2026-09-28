@@ -4,6 +4,8 @@ One canonical resume for engineering-management roles in platform, data, and app
 
 ## Content
 
+The typography matches UM-SEM-5-2: Computer Modern (CM-Super), with small-cap name and section headings, 9.5pt body text and 9pt supporting text. PDF validation uses layout-aware extraction and Unicode normalization for font ligatures.
+
 `main.tex` defines the document order. `resume.sty` owns the layout; `sections/` contains each section exactly once. Edit these sources rather than maintaining company-specific resumes.
 
 The Executive Summary reproduces **UM-SEM-5-2 verbatim**. The **Professional Experience Snapshot is retained**. The validator protects both requirements. Its summary hash ignores line-wrap whitespace, but detects wording and punctuation changes.
