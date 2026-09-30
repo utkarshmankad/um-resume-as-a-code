@@ -8,7 +8,7 @@ The typography matches UM-SEM-5-2: Computer Modern (CM-Super), with small-cap na
 
 `main.tex` defines the document order. `resume.sty` owns the layout; `sections/` contains each section exactly once. Edit these sources rather than maintaining company-specific resumes.
 
-The Executive Summary reproduces **UM-SEM-5-2 verbatim**. The **Professional Experience Snapshot is retained**. The validator protects both requirements. Its summary hash ignores line-wrap whitespace, but detects wording and punctuation changes.
+The Executive Summary reproduces **UM-SEM-5-2 verbatim**. The **Professional Experience Snapshot is retained**. The validator protects both requirements and the complete approved Core Competencies wording and order. Core Competencies and Executive Summary checks ignore whitespace-only source rewraps; intentional wording changes require owner review before updating their baselines.
 
 The employment sections preserve all unique material facts and section labels from the approved UM-SEM-5-2, pruning duplicate information only. Oracle ends April 2026; the M.Tech year follows the latest PDF (2019). Fynd's listed function counts total 17 within the stated 20-person team; the source does not identify the remaining three. ReportAPI supports Docker Compose deployment; its Helm configuration is experimental/incomplete. Independent projects are ISHA, ReportAPI Self-Hosted, and ClaudeWatch. Project code supports implementation claims, not adoption or revenue claims.
 
@@ -30,6 +30,8 @@ Outputs (ignored by Git):
 - `build/Utkarsh-Mankad-Resume.pdf`
 - `build/resume.txt`
 - `build/main.log`
+
+The build first runs protected-content regressions (`python3 -m unittest discover -s tests -v`) and validates protected source wording before invoking the compiler.
 
 The validator checks two A4 pages, exact summary wording, snapshot presence, section ordering, embedded Unicode fonts, required contact/date content, no obsolete variants, no overflow/missing characters, and a single occurrence of the 70% result.
 

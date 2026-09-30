@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
+"${PYTHON:-python3}" -m unittest discover -s tests -v
+"${PYTHON:-python3}" -c "from scripts.validate_resume import validate_protected_sources; validate_protected_sources()"
 compiler="${TECTONIC:-tectonic}"
 if [[ "$($compiler --version)" != 'Tectonic 0.17.0' ]]; then
   echo 'Build requires Tectonic 0.17.0.' >&2
