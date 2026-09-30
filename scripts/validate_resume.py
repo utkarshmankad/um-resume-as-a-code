@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the deliverable and the two explicitly preserved user requirements."""
+"""Validate the deliverable and the explicitly protected user requirements."""
 from pathlib import Path
 import hashlib
 import re
@@ -9,6 +9,7 @@ import unicodedata
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
+COMPETENCIES_SHA256 = "edcfe8d26637132e899ca722879db35db597ab99bc23b520b7f6734d3f865862"
 SUMMARY_SHA256 = "80e4346f960394b1a0edd6b02e3014d3469210cef29bb71cb5f16e700c6bb828"
 
 
@@ -21,12 +22,25 @@ def normalize(text):
     return " ".join(text.split())
 
 
-def validate():
-    source = (ROOT / "sections/summary.tex").read_text()
+def validate_protected_sources(root=ROOT):
+    """Check approved wording before compiling or reading a PDF.
+
+    Hashes ignore source line wrapping only. An intentional content change needs
+    owner review before its baseline is updated.
+    """
+    competencies = (root / "sections/competencies.tex").read_text()
+    check(hashlib.sha256(normalize(competencies).encode()).hexdigest() == COMPETENCIES_SHA256,
+          "The approved Core Competencies changed. Restore its complete wording and order.")
+    source = (root / "sections/summary.tex").read_text()
     summary = source.split("\\section{Executive Summary}\n", 1)[1]
     summary = re.sub(r"\\textbf\{([^}]+)\}", r"\1", summary).replace(r"\&", "&")
     check(hashlib.sha256(normalize(summary).encode()).hexdigest() == SUMMARY_SHA256,
           "The approved UM-SEM-5-2 summary changed. Restore its exact wording.")
+    return summary
+
+
+def validate():
+    summary = validate_protected_sources()
     check(not (ROOT / "resumes").exists(), "Obsolete resume variants must not return.")
     check(not (ROOT / ".github/workflows/compile-resume.yml").exists(), "Old release workflow remains.")
 
